@@ -1,0 +1,11 @@
+site:
+  id: BUD-HQ
+  management_cidr: 10.10.10.0/24
+  wan:
+    primary: ISP-A
+    secondary: ISP-B
+  objectives:
+    business_wifi_rssi_dbm: -67
+    guest_internet_only: true
+    management_from_admin_vlan_only: true
+  notes: "Example only; replace with surveyed and approved values."

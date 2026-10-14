@@ -1,0 +1,7 @@
+networks:
+  - {name: management, vlan: 10, cidr: 10.10.10.0/24, zone: management}
+  - {name: corporate, vlan: 20, cidr: 10.10.20.0/24, zone: internal}
+  - {name: servers, vlan: 30, cidr: 10.10.30.0/24, zone: restricted}
+  - {name: iot, vlan: 50, cidr: 10.10.50.0/24, zone: iot}
+  - {name: guest, vlan: 60, cidr: 10.10.60.0/24, zone: hotspot}
+policy: "Default deny between untrusted and internal zones; add documented flows only."

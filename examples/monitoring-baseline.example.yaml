@@ -1,0 +1,8 @@
+checks:
+  - {name: unifi_ui_https, interval: 60s, severity: high}
+  - {name: dns_resolution, interval: 60s, severity: high}
+  - {name: wan_loss_latency, interval: 30s, severity: high}
+  - {name: radius_authentication, interval: 300s, severity: high}
+  - {name: backup_freshness, interval: 24h, severity: high}
+  - {name: poe_budget, interval: 300s, severity: warning}
+  - {name: channel_utilization, interval: 300s, severity: warning}

@@ -1,0 +1,12 @@
+wlans:
+  - name: CORP
+    network: corporate
+    security: WPA2-WPA3-Enterprise
+    radius_profile: radius-production
+    bands: [5ghz, 6ghz]
+  - name: GUEST
+    network: guest
+    security: captive-portal
+    client_isolation: true
+    internet_only: true
+notes: "Validate legacy client support before disabling 2.4 GHz or requiring WPA3."
