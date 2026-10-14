@@ -5,4 +5,9 @@ target="${1:-}"
 echo "== Resolution =="; getent ahosts "$target" | sort -u || true
 echo "== Route =="; ip route get "$target" 2>/dev/null || true
 echo "== ICMP =="; ping -c 4 -W 2 "$target" || true
-echo "== Path MTU =="; command -v tracepath >/dev/null && tracepath -m 12 "$target" || true
+echo "== Path MTU =="
+if command -v tracepath >/dev/null; then
+  tracepath -m 12 "$target" || true
+else
+  echo "tracepath is not installed; skipping path MTU discovery."
+fi
